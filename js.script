@@ -1,81 +1,8 @@
-function showContent(topic) {
-    let icon = document.getElementById("icon");
-    let title = document.getElementById("title");
-    let description = document.getElementById("description");
+function showContent(sectionId) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
 
-    if (topic === "home") {
-        icon.innerText = "🌐";
-        title.innerText = "Home";
-        description.innerText = "The Internet is a powerful tool that helps people communicate, learn, and work online.";
-    }
-    else if (topic === "about") {
-        icon.innerText = "👥";
-        title.innerText = "About Us";
-        description.innerText = "We are students who created this website as a project to explain the uses of the Internet.";
-    }
-    else if (topic === "options") {
-        icon.innerText = "⚙️";
-        title.innerText = "Options";
-        description.innerText = "Use the menu to explore different topics about how the Internet is used in daily life.";
-    }
-    else if (topic === "communication") {
-        icon.innerText = "💬";
-        title.innerText = "Communication";
-        description.innerText = "The Internet allows people to chat, call, and video conference easily.";
-    }
-    else if (topic === "education") {
-        icon.innerText = "📚";
-        title.innerText = "Education";
-        description.innerText = "Students use the Internet for online classes, research, and learning resources.";
-    }
-    else if (topic === "entertainment") {
-        icon.innerText = "🎬";
-        title.innerText = "Entertainment";
-        description.innerText = "The Internet provides movies, music, videos, and streaming services.";
-    }
-    else if (topic === "shopping") {
-        icon.innerText = "🛒";
-        title.innerText = "Online Shopping";
-        description.innerText = "People can buy products and services online using the Internet.";
-    }
-    else if (topic === "social") {
-        icon.innerText = "📱";
-        title.innerText = "Social Media";
-        description.innerText = "Social media connects people through posts, chats, and shared content.";
-    }
-    else if (topic === "email") {
-        icon.innerText = "✉️";
-        title.innerText = "Email";
-        description.innerText = "Email is used to send and receive messages quickly over the Internet.";
-    }
-    else if (topic === "news") {
-        icon.innerText = "📰";
-        title.innerText = "News";
-        description.innerText = "The Internet provides real-time news from around the world.";
-    }
-    else if (topic === "games") {
-        icon.innerText = "🎮";
-        title.innerText = "Online Games";
-        description.innerText = "Online games allow people to play and compete with others globally.";
-    }
-    else if (topic === "maps") {
-        icon.innerText = "🗺️";
-        title.innerText = "Maps & Navigation";
-        description.innerText = "Online maps help users find locations and directions.";
-    }
-    else if (topic === "banking") {
-        icon.innerText = "🏦";
-        title.innerText = "Online Banking";
-        description.innerText = "People use the Internet to manage bank accounts and pay bills.";
-    }
-    else if (topic === "jobs") {
-        icon.innerText = "💼";
-        title.innerText = "Job Search";
-        description.innerText = "The Internet helps people find jobs and apply online.";
-    }
-    else if (topic === "health") {
-        icon.innerText = "❤️";
-        title.innerText = "Health Information";
-        description.innerText = "Users can learn about health, fitness, and wellness online.";
-    }
+    document.getElementById(sectionId).style.display = 'block';
 }
